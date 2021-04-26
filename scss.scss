@@ -1,0 +1,161 @@
+$default-margin: 35px;
+$default-bc-color: #fff;
+$default-br: 6px;
+
+* {
+  font-family: 'Teko', sans-serif;
+  font-size: 25px;
+}
+
+header {
+  height: 12vh;
+  background-color: #1F2427;
+  display:flex;
+  justify-content:center;
+  padding-top:20px;
+  border-top-left-radius: $default-br;
+  border-top-right-radius: $default-br;
+}
+
+.outlineEle {
+  margin: 5px 30px;
+ }
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  padding: 5px 15px;
+  outline: 0;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0 15px;
+
+  &-ok {
+    background: #108E6D;
+    color: $default-bc-color;
+  }
+
+  &-new {
+    background: #074A38;
+  }
+}
+
+.btn:hover {
+  background: #32D6AC;
+}
+
+.container {
+  background-color: $default-bc-color;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+
+  &-nav{
+    background: #ab131b;
+    display:flex;
+    text-align: center;
+    justify-content:center;
+    align-items:center;
+    a {
+      color: $default-bc-color;
+      background-color:#871216;
+      padding: 15px $default-margin;
+      margin: 0 15px;
+
+      &:hover {
+        background-color:#F03A44;
+      }
+    }
+
+  }
+  &-content {
+    padding: $default-margin;
+    background-color:#ab131b;
+
+    &-new {
+      background: #f9f9f9;
+      padding: $default-margin;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom-left-radius: $default-br;
+      border-bottom-right-radius: $default-br;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      pizza-item {
+        flex: 0 0 33.33%;
+        margin: 20px 0px;
+        transition: 0.2s all ease;
+        a {
+          color: black;
+        }
+        .pizza-item {
+          text-align:center;
+          margin: 0 $default-margin;
+          padding: 20px 20px;
+          border-radius: $default-br;
+          background: whitesmoke;
+
+          &:hover {
+            transform: scale(1.05);
+            transition: 0.2s all ease;
+            background: #EBEBEB;
+          }
+
+          pizza-display {
+            display: block;
+            .pizza-display {
+              &-base {
+                position: relative;
+                text-align: center;
+              }
+            }
+          }
+
+          h4 {
+            margin: 5px 0;
+            font-weight: normal;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+              margin:10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  height:5vh;
+  border-radius: 0 0 $default-br $default-br;
+  color: $default-bc-color;
+  padding: 10px;
+  text-align: center;
+  background-color: #108E6D;
+  display: flex;
+  justify-content: center;
+  .footer-section {
+    width:300px;
+    color: white;
+    margin: 0px 30px;
+    a{
+      color: $default-bc-color;
+    }
+  }
+}
